@@ -1,0 +1,26 @@
+<div th:fragment="table">
+    <table class="table table-hover">
+        <tr class="tableTitle">
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Language</td>
+            <td>Author</td>
+            <td>Amount of pages</td>
+            <td>ISBN</td>
+            <td>Year of publication</td>
+            <td>Type</td>
+        </tr>
+        <tr th:each="bookInfo : ${allBooks}">
+            <td th:utext="${bookInfo.getId()}">..</td>
+            <td th:utext="${bookInfo.getName()}">..</td>
+            <td th:utext="${bookInfo.getPrice()}">..</td>
+            <td th:utext="${bookInfo.getLanguage()}">..</td>
+            <td th:utext="${bookInfo.getAuthor()}">..</td>
+            <td th:utext="${bookInfo.getPages()}">..</td>
+            <td th:utext="${bookInfo.getISBN()}">..</td>
+            <td th:utext="${bookInfo.getPublicationYear()}">..</td>
+            <td th:utext="${bookInfo.getType()}">..</td>
+        </tr>
+    </table>
+</div>
